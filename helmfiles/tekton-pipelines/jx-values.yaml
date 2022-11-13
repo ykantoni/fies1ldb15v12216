@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: ykantoni
+    repository: fies1ldb15v12216
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: swc.io
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: ykantoni
   repository: bucketrepo
   secretStorage: local
   vault: {}
