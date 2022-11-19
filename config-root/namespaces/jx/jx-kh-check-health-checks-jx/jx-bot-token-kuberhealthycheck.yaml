@@ -22,7 +22,7 @@ spec:
           memory: 15Mi
         limits:
           cpu: 40m
-      restartPolicy: Never
+    restartPolicy: Never
       env:
       - name: OAUTH_TOKEN
         valueFrom:
