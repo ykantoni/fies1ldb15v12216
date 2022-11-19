@@ -13,6 +13,7 @@ spec:
   runInterval: 5m
   timeout: 2m
   podSpec:
+    restartPolicy: Never
     containers:
     - name: jx-bot-token
       image: ghcr.io/jenkins-x/jx-bot-token:0.0.78
@@ -22,7 +23,6 @@ spec:
           memory: 15Mi
         limits:
           cpu: 40m
-    restartPolicy: Never
       env:
       - name: OAUTH_TOKEN
         valueFrom:
