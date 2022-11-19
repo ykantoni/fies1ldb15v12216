@@ -13,6 +13,7 @@ spec:
   runInterval: 5m
   timeout: 2m
   podSpec:
+    restartPolicy: Never
     containers:
     - name: jx-webhook-events
       image: ghcr.io/jenkins-x/jx-webhook-events:0.0.78
@@ -22,6 +23,5 @@ spec:
           memory: 15Mi
         limits:
           cpu: 40m
-      restartPolicy: Never
     serviceAccountName: jx-webhook-events-sa
     terminationGracePeriodSeconds: 60
